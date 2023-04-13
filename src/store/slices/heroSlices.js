@@ -14,7 +14,7 @@ import {
   getHeroeFiltroRace,
   getHeroeFiltroWeight,
   getHeroeFiltroEyeColor,
-  getHeroeFiltroHairColor
+  getHeroeFiltroHairColor,
 } from "../thunks/heroThunks";
 
 const heroSlice = createSlice({
