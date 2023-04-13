@@ -8,9 +8,6 @@ const SearchName = () => {
     const dispatch = useDispatch();
     const filterForName = (e) => {
         e.preventDefault();
-        // const name = {
-        //     name: nameComplete
-        // }
         dispatch(getHeroesName(nameComplete));
     }
 return (

@@ -14,12 +14,30 @@ const Powerstats = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const dispatch = useDispatch();
   const filterAll = () => dispatch(getHeroeForA());
-  const filterIntelligence = () => dispatch(getHeroeFiltroIntelligence());
-  const filterStrength = () => dispatch(getHeroeFiltroStrength());
-  const filterSpeed = () => dispatch(getHeroeFiltroSpeed());
-  const filterDurability = () => dispatch(getHeroeFiltroDurability());
-  const filterPower = () => dispatch(getHeroeFiltroPower());
-  const filterCombat = () => dispatch(getHeroeFiltroCombat());
+  const filterIntelligence = () => {
+    dispatch(getHeroeFiltroIntelligence())
+    setOpenMenu(!openMenu)
+  };
+  const filterStrength = () => {
+    dispatch(getHeroeFiltroStrength())
+    setOpenMenu(!openMenu)
+  };
+  const filterSpeed = () => {
+    dispatch(getHeroeFiltroSpeed())
+    setOpenMenu(!openMenu)
+  };
+  const filterDurability = () => {
+    dispatch(getHeroeFiltroDurability())
+    setOpenMenu(!openMenu)
+  };
+  const filterPower = () => {
+    dispatch(getHeroeFiltroPower())
+    setOpenMenu(!openMenu)
+  };
+  const filterCombat = () => {
+    dispatch(getHeroeFiltroCombat())
+    setOpenMenu(!openMenu)
+  };
 
   const onMenu = () => setOpenMenu(!openMenu);
   return (
