@@ -12,14 +12,14 @@ const SearchName = () => {
   };
   return (
     <div className="flex font-semibold text-lg">
-      <img className="w-7 mx-1 hover:mr-2" src={Lupa} onClick={filterForName} />
       <input
-        className="mx-1 w-24 hover:ml-2 bg-blue-500 text-white placeholder:text-blue-300"
+        className=" w-20 hover:mr-2 bg-blue-500 text-white placeholder:text-blue-300"
         type="text"
         placeholder="Search"
         value={nameComplete}
         onChange={(e) => setNameComplete(e.target.value)}
       />
+      <img className="w-7 justify-around hover:ml-2 mr-4" src={Lupa} onClick={filterForName} />
     </div>
   );
 };
