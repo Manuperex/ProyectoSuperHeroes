@@ -6,14 +6,12 @@ export const getHeroesName = createAsyncThunk(
   "hero/getHeroesName",
   async (name, { rejectWithValue }) => {
     try {
-      console.log(await heroSlice.getHeroesName(name));
       const response = await heroSlice.getHeroesName(name);
       const resultsData = response.data.results.filter((data) => {
         if (data.biography.alignment === "good") {
           return data;
         }
       });
-      console.log(resultsData);
       return resultsData;
     } catch (error) {
       return rejectWithValue(error.message.data);
@@ -300,7 +298,6 @@ export const getHeroeFiltroHeight = createAsyncThunk(
         }
         return 0;
       });
-      console.log(resultsDataFilter);
       return resultsDataFilter;
     } catch (error) {
       return rejectWithValue(error.response.data);
@@ -358,7 +355,6 @@ export const getHeroeFiltroWeight = createAsyncThunk(
         }
         return 0;
       });
-      console.log(resultsDataFilter);
       return resultsDataFilter;
     } catch (error) {
       return rejectWithValue(error.response.data);

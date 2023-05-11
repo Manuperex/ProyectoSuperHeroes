@@ -3,7 +3,7 @@ import Lupa from "../assets/lupa.png";
 import { getHeroesName } from "../store/thunks/heroThunks";
 import { useState } from "react";
 
-const SearchName = () => {
+const   SearchName = () => {
   const [nameComplete, setNameComplete] = useState("");
   const dispatch = useDispatch();
   const filterForName = (e) => {
